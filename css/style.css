@@ -1,0 +1,206 @@
+/* Universal Styles */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--light-grayish-blue);
+}
+
+/* --- Desktop Flow --- */
+
+/* Container */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: 282px 266px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+    padding: 85px;
+    gap: 30px;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.image img{
+    border-radius: 25px;
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.verified{
+    opacity: 50%;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.quote{
+    opacity: 70%;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+/* Daniel Section */
+
+.daniel{
+    grid-area: daniel;
+    background-color: var(--moderate-violet);
+    border-radius: 10px;
+    align-self: stretch;
+    justify-self: stretch;
+    background-image:  url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 355px 0px;
+    padding: 25px 30px;
+    color: var(--white);
+}
+
+.daniel img{
+    border: 3px solid #A775F1;
+}
+
+/* Jonathan Section */
+
+.jonathan{
+    grid-area: jonathan;
+    background-color: var(--very-dark-grayish-blue);
+    border-radius: 10px;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 25px 30px;
+    color: var(--white);
+}
+
+/* Kira Section */
+
+.kira{
+    grid-area: kira;
+    background-color: var(--white);
+    border-radius: 10px;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 25px 30px;
+    color: var(--very-dark-grayish-blue);
+}
+
+/* Jeanette Section */
+
+.jeanette{
+    grid-area: jeanette;
+    background-color: var(--white);
+    border-radius: 10px;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 25px 30px;
+    color: var(--very-dark-grayish-blue);
+}
+
+/* Patrick Section */
+
+.patrick{
+    grid-area: patrick;
+    background-color: var(--very-dark-blackish-blue);
+    border-radius: 10px;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 25px 30px;
+    color: var(--white);
+}
+
+.patrick img{
+    border: 3px solid #A775F1;
+}
+
+/* --- Tablet Flow */
+
+@media screen and (max-width: 1150px) {
+
+    /* Container */
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 255px);
+        grid-template-columns: 28.2rem 26.6rem 26.6rem;
+        grid-template-areas: 
+        "daniel daniel jonathan"
+        "jeanette patrick patrick"
+        "kira kira kira";
+        grid-column-gap: 3rem;
+        grid-row-gap: 2.4rem;
+        justify-content: center;
+        align-content: center;
+        letter-spacing: .03px;
+        margin-top: 7.1rem;
+        margin-bottom: 7.1rem;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+
+    /* Container */
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 255px);
+        grid-template-rows: 28.2rem 26.6rem 28.2rem 26.6rem;
+        grid-template-areas: 
+        "daniel daniel"
+        "jonathan jeanette"
+        "patrick patrick"
+        "kira kira";
+    }
+    
+}
+
+
+/* --- Mobile Flow --- */
+
+@media screen and (max-width:570px) {
+    
+    /* Container */
+
+    .container{
+        display: grid;
+        grid-template-columns: 327px;
+        grid-template-rows: 444px 240px 222px 384px 483px;
+        grid-template-areas: 
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira";
+    }
+}
